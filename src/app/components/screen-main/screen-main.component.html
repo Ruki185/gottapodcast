@@ -1,0 +1,6 @@
+<div *ngFor="let item of feed">
+    <h3>{{ item.title[0] }}</h3>
+    <div [innerHTML]="sanitizeHtml(item.description[0])"></div>
+    <hr>
+  </div>
+  

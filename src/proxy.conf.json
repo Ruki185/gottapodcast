@@ -1,0 +1,7 @@
+{
+    "/gottapodcast.rss": {
+        "target": "https://iz28j1.podcaster.de",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
