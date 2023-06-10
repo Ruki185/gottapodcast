@@ -3,19 +3,15 @@ import * as xml2js from 'xml2js';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RSSService {
-  private feedUrl: string = '/gottapodcast.rss';
+  private feedUrl: string = '../../assets/gottapodcast.xml';
   public feedItems: any[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  ngOnInit() {
-    this.fetchFeed();
-  }
-
-  public fetchFeed() {
+  public fetchFeed(): void {
     this.http.get(this.feedUrl, { responseType: 'text' }).subscribe((data) => {
       xml2js.parseString(data, (err, result) => {
         if (err) {
@@ -27,7 +23,8 @@ export class RSSService {
     });
   }
 
-  get feed() {
+  get feed(): any[] {
+    console.log(this.feedItems);
     return this.feedItems;
   }
 }

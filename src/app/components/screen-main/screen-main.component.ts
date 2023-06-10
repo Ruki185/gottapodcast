@@ -5,13 +5,13 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'screen-main',
   templateUrl: './screen-main.component.html',
-  styleUrls: ['./screen-main.component.scss']
+  styleUrls: ['./screen-main.component.scss'],
 })
-export class ScreenMainComponent implements OnInit{
+export class ScreenMainComponent implements OnInit {
   constructor(
-    private sanitizer: DomSanitizer, 
+    private sanitizer: DomSanitizer,
     private rssService: RSSService
-    ) { }
+  ) {}
 
   ngOnInit() {
     this.rssService.fetchFeed();
@@ -21,8 +21,12 @@ export class ScreenMainComponent implements OnInit{
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
-  get feed() {
-    return this.rssService.feedItems;
+  public getChapters(descr: string): string {
+    return '';
   }
 
+  get feed() {
+    console.log(this.rssService.feedItems[0]);
+    return this.rssService.feedItems;
+  }
 }

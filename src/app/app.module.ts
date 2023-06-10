@@ -5,18 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScreenMainComponent } from './components/screen-main/screen-main.component';
+import { EpisodeComponent } from './components/episode/episode.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ScreenMainComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  declarations: [AppComponent, ScreenMainComponent, EpisodeComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

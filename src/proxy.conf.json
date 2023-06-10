@@ -1,7 +1,9 @@
 {
-    "/gottapodcast.rss": {
-        "target": "https://iz28j1.podcaster.de",
-        "secure": false,
-        "logLevel": "debug"
-    }
+  "https://iz28j1.podcaster.de/gottapodcast.rss": {
+    "target": "https://iz28j1.podcaster.de/gottapodcast.rss",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": { "^/gottapodcast.rss": "" },
+    "changeOrigin": true
+  }
 }
