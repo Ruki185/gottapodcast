@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MatModule } from './mat.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+/* ******* COMPONENTS ******* */
 import { ScreenMainComponent } from './components/screen-main/screen-main.component';
-import { EpisodeComponent } from './components/episode/episode.component';
+import { OverlayEpisodeComponent } from './overlays/overlay-episode/overlay-episode.component';
 
 @NgModule({
-  declarations: [AppComponent, ScreenMainComponent, EpisodeComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  declarations: [AppComponent, ScreenMainComponent, OverlayEpisodeComponent],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule,
+    MatModule,
+    OverlayModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

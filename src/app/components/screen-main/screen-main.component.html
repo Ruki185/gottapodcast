@@ -1,8 +1,42 @@
-<div *ngFor="let item of feed">
-  <h3>{{ item.title[0] }}</h3>
-  <img src="item.itunes:image[0]" />
-  <div [innerHTML]="sanitizeHtml(item.description[0].split('<br>')[0])"></div>
-  Kapitel:
-  <div [innerHTML]="sanitizeHtml(getChapters(item.description[0]))"></div>
-  <hr />
+<div class="w-75 m-4">
+  <!-- CURRENT EPISODE -->
+  <ng-container>
+    <div class="m-2">
+      <h2>Aktuelle Episode</h2>
+      <div><img class="w-25" src="{{ feed[0]?.imageUrl }}" />"</div>
+      <div>
+        <h5>{{ feed[0]?.title }}</h5>
+      </div>
+    </div>
+    <hr />
+    <div class="m-2"><h2>Weitere Episoden</h2></div>
+  </ng-container>
+
+  <!-- PREVIOUS EPISODES -->
+  <ng-container *ngFor="let year of years">
+    <div class="m-2">
+      <h5>Episoden aus {{ year }} ({{ getNumberOfEpisodes(year) }})</h5>
+    </div>
+    <ng-container *ngFor="let item of feed | slice : 1">
+      <button
+        *ngIf="year === item.year"
+        mat-raised-button
+        matTooltip="{{ getTitle(item) }}"
+        [matTooltipPosition]="'above'"
+        (click)="openEpisode(item)"
+      >
+        Akt {{ item.episodeNr }}
+      </button>
+
+      <!-- TODO: move this over to overlay-episode 
+      <h3>{{ item.title[0] }}</h3>
+      <img src="item.itunes:image[0]" />
+      <div [innerHTML]="sanitizeHtml(item.description[0].split('<br>')[0])"></div>
+      Kapitel:
+      <div [innerHTML]="sanitizeHtml(getChapters(item.description[0]))"></div>
+      <hr />
+      -->
+    </ng-container>
+    <hr />
+  </ng-container>
 </div>
