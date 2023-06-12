@@ -30,7 +30,7 @@ export class RSSService {
               year: Number(formatDate(new Date(x.pubDate), 'YYYY', 'en')),
               date: x.pubDate,
               imageUrl: x['itunes:image'][0]['$'].href,
-              link: x.link,
+              url: x.enclosure[0]['$'].url,
               author: x.author,
             });
           });

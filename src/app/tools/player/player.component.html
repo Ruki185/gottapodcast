@@ -1,0 +1,8 @@
+<div>
+  <audio controls>
+    <source src="{{ audio }}" type="audio/mp3" />
+  </audio>
+  <button mat-raised-button (click)="playEpisode(item)">
+    {{ item.title }}
+  </button>
+</div>

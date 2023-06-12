@@ -20,8 +20,8 @@ export class ScreenMainComponent implements OnInit {
 
   public openEpisode(item: any) {
     // TODO
-    console.log(item.imageUrl);
     console.log(this.rssService.feedItems[0]);
+    console.log(this.feed[0]);
   }
 
   public sanitizeHtml(html: string): SafeHtml {

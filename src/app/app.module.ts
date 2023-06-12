@@ -10,9 +10,10 @@ import { AppComponent } from './app.component';
 /* ******* COMPONENTS ******* */
 import { ScreenMainComponent } from './components/screen-main/screen-main.component';
 import { OverlayEpisodeComponent } from './overlays/overlay-episode/overlay-episode.component';
+import { PlayerComponent } from './tools/player/player.component';
 
 @NgModule({
-  declarations: [AppComponent, ScreenMainComponent, OverlayEpisodeComponent],
+  declarations: [AppComponent, ScreenMainComponent, OverlayEpisodeComponent, PlayerComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

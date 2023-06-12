@@ -5,6 +5,6 @@ export interface singleEpisode {
   year: number;
   date: Date;
   imageUrl?: string;
-  link: string;
+  url: string;
   author: string;
 }

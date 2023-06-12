@@ -3,13 +3,11 @@
   <ng-container>
     <div class="m-2">
       <h2>Aktuelle Episode</h2>
-      <div><img class="w-25" src="{{ feed[0]?.imageUrl }}" />"</div>
-      <div>
-        <h5>{{ feed[0]?.title }}</h5>
-      </div>
+      <overlay-episode (item)="(feed[0])"></overlay-episode>
+      <player (item)="(feed[0])"></player>
+      <hr />
+      <div class="m-2"><h2>Weitere Episoden</h2></div>
     </div>
-    <hr />
-    <div class="m-2"><h2>Weitere Episoden</h2></div>
   </ng-container>
 
   <!-- PREVIOUS EPISODES -->
