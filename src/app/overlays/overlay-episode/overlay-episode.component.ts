@@ -7,4 +7,6 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 })
 export class OverlayEpisodeComponent {
   @Input() item: any;
+
+  public getSummary(description: string) {}
 }

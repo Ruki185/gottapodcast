@@ -1,4 +1,8 @@
-<!-- <div><img class="w-25" src="{{ item?.imageUrl }}" /></div>
+<div><img class="w-25" src="{{ item?.imageUrl }}" /></div>
 <div>
-  <h5>{{ item.title }}</h5>
-</div> -->
+  <h5>{{ item?.title }}</h5>
+</div>
+<div>
+  {{ getSummary(item?.description) }}
+</div>
+<player [item]="item"></player>

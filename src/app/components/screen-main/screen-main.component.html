@@ -3,8 +3,7 @@
   <ng-container>
     <div class="m-2">
       <h2>Aktuelle Episode</h2>
-      <overlay-episode (item)="(feed[0])"></overlay-episode>
-      <player (item)="(feed[0])"></player>
+      <overlay-episode [item]="feed[0]"></overlay-episode>
       <hr />
       <div class="m-2"><h2>Weitere Episoden</h2></div>
     </div>

@@ -4,7 +4,7 @@ export interface singleEpisode {
   description: string;
   year: number;
   date: Date;
-  imageUrl?: string;
+  imageUrl: string;
   url: string;
   author: string;
 }

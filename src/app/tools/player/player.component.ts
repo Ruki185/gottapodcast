@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'player',
@@ -7,18 +7,13 @@ import { Component, Input, SimpleChanges } from '@angular/core';
 })
 export class PlayerComponent {
   @Input() item: any;
-  audio: string;
+  public audio: string;
 
   constructor() {
-    this.audio = '';
+    this.audio = this.item?.url;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['item']) {
-    }
-  }
-
-  playEpisode(episode: { name: string; src: string }): void {
-    this.audio = episode.src;
+  log(item: any) {
+    console.log(item);
   }
 }
