@@ -1,9 +1,12 @@
-<div class="w-75 m-4">
+<div class="w-100">
+  <header></header>
+</div>
+<div class="justify-content-center w-75 m-4">
   <!-- CURRENT EPISODE -->
   <ng-container>
     <div class="m-2">
       <h2>Aktuelle Episode</h2>
-      <overlay-episode [item]="feed[0]"></overlay-episode>
+      <!--<overlay-episode [item]="feed[0]"></overlay-episode>-->
       <hr />
       <div class="m-2"><h2>Weitere Episoden</h2></div>
     </div>
@@ -24,15 +27,6 @@
       >
         Akt {{ item.episodeNr }}
       </button>
-
-      <!-- TODO: move this over to overlay-episode 
-      <h3>{{ item.title[0] }}</h3>
-      <img src="item.itunes:image[0]" />
-      <div [innerHTML]="sanitizeHtml(item.description[0].split('<br>')[0])"></div>
-      Kapitel:
-      <div [innerHTML]="sanitizeHtml(getChapters(item.description[0]))"></div>
-      <hr />
-      -->
     </ng-container>
     <hr />
   </ng-container>

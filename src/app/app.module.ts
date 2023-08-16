@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatModule } from './mat.module';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,9 +12,16 @@ import { AppComponent } from './app.component';
 import { ScreenMainComponent } from './components/screen-main/screen-main.component';
 import { OverlayEpisodeComponent } from './overlays/overlay-episode/overlay-episode.component';
 import { PlayerComponent } from './tools/player/player.component';
+import { HeaderComponent } from './tools/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, ScreenMainComponent, OverlayEpisodeComponent, PlayerComponent],
+  declarations: [
+    AppComponent,
+    ScreenMainComponent,
+    OverlayEpisodeComponent,
+    PlayerComponent,
+    HeaderComponent,
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,

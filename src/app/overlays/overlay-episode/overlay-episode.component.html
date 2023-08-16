@@ -1,8 +1,14 @@
-<div><img class="w-25" src="{{ item?.imageUrl }}" /></div>
-<div>
-  <h5>{{ item?.title }}</h5>
+<div class="d-flex justify-content-center m-3">
+  <img class="w-50" src="{{ imageUrl }}" />
 </div>
-<div>
-  {{ getSummary(item?.description) }}
+<div class="m-3">
+  <player [item]="data.item"></player>
+  <div>
+    <h5>{{ title }}</h5>
+  </div>
+  <div>
+    {{ summary }}
+  </div>
+  <!-- <h5>Kapitel</h5>
+  <div>{{ chapters }}</div>-->
 </div>
-<player [item]="item"></player>

@@ -2,6 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RSSService } from 'src/app/services/rss.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { OverlayEpisodeComponent } from 'src/app/overlays/overlay-episode/overlay-episode.component';
 
 @Component({
   selector: 'screen-main',
@@ -11,17 +13,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ScreenMainComponent implements OnInit {
   constructor(
     private sanitizer: DomSanitizer,
-    private rssService: RSSService
+    private rssService: RSSService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit() {
     this.rssService.fetchFeed();
-  }
-
-  public openEpisode(item: any) {
-    // TODO
-    console.log(this.rssService.feedItems[0]);
-    console.log(this.feed[0]);
   }
 
   public sanitizeHtml(html: string): SafeHtml {
@@ -31,6 +28,16 @@ export class ScreenMainComponent implements OnInit {
   public getChapters(descr: string): string {
     // TODO this needs to be in overlay-episode
     return '';
+  }
+
+  public openEpisode(item: any): void {
+    if (item) {
+      const dialogRef = this.dialog.open(OverlayEpisodeComponent, {
+        width: '50%',
+        data: { item: item },
+      });
+      dialogRef.afterClosed().subscribe((result) => {});
+    }
   }
 
   public getTitle(item: any) {
