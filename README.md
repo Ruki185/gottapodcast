@@ -1,1 +1,2 @@
-# Gotta Pod Cast!
+# Gottapodcast
+Yeah I definitely need to update this
