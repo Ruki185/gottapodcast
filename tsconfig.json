@@ -21,11 +21,11 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@components/*": ["src/app/components"],
-      "@tools/*": ["src/app/tools"],
-      "@services/*": ["src/app/services"],
-      "@overlays/*": ["src/app/overlays"],
-      "@domain/*": ["src/app/domain"]
+      "@components/*": ["./src/app/components/*"],
+      "@tools/*": ["./src/app/tools/*"],
+      "@services/*": ["./src/app/services/*"],
+      "@overlays/*": ["./src/app/overlays/*"],
+      "@domain/*": ["./src/app/domain/*"]
     }
   },
   "angularCompilerOptions": {

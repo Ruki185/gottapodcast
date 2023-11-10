@@ -1,4 +1,4 @@
-import { singleEpisode } from '../domain/episodes.domain';
+import { singleEpisode } from '../../domain/episodes.domain';
 import { Injectable } from '@angular/core';
 import * as xml2js from 'xml2js';
 import { HttpClient } from '@angular/common/http';

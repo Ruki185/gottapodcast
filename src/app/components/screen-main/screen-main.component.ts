@@ -1,6 +1,6 @@
 //import { singleEpisode } from './../../domain/episodes.d';
 import { Component, OnInit } from '@angular/core';
-import { RSSService } from 'src/app/services/rss.service';
+import { RSSService } from 'src/app/services/rss-service/rss.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { OverlayEpisodeComponent } from 'src/app/overlays/overlay-episode/overlay-episode.component';

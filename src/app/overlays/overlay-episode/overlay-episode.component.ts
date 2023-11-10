@@ -1,4 +1,4 @@
-import { EpisodeService } from './../../services/episode.service';
+import { EpisodeService } from '@services/episode-service/episode.service';
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
