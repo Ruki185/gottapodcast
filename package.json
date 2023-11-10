@@ -28,8 +28,9 @@
     "stream": "^0.0.2",
     "timers": "^0.1.1",
     "tslib": "^2.3.0",
+    "typescript": "^5.2.2",
     "xml2js": "^0.6.0",
-    "zone.js": "~0.13.0"
+    "zone.js": "^0.14.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.5",
@@ -43,7 +44,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "prettier": "2.8.8",
-    "typescript": "~5.0.4"
+    "prettier": "2.8.8"
   }
 }
