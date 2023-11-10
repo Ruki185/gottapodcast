@@ -1,5 +1,18 @@
-
 {
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#108533",
+    "activityBar.activeBorder": "#4edaec",
+    "activityBar.background": "#0d6620",
+    "activityBarBadge.background": "#821d4d",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e7c2",
+    "sash.hoverBorder": "#108533",
+    "tab.activeBorder": "#108533",
+    "panel.border": "#0d6620",
+    "editorGroup.border": "#0d6620",
+    "sideBar.border": "#0d6620"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true
 }

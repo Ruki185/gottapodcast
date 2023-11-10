@@ -62,11 +62,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gottapodcast:build:production"
+              "buildTarget": "gottapodcast:build:production"
             },
             "development": {
-              "browserTarget": "gottapodcast:build:development",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "src/proxy.conf.json",
+              "buildTarget": "gottapodcast:build:development"
             },
             "options": {
               "proxyConfig": "src/proxy.conf.json"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gottapodcast:build"
+            "buildTarget": "gottapodcast:build"
           }
         },
         "test": {
