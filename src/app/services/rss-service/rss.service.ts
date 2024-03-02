@@ -9,7 +9,7 @@ import { formatDate } from '@angular/common';
 })
 export class RSSService {
   private feedUrl: string = '../../assets/gottapodcast.xml';
-  //private feedUrl: string = 'http://localhost:4200/rss/gottapodcast.rss';
+  // private feedUrl: string = 'http://localhost:4200/rss/gottapodcast.rss';
   public feedItems: any[] = [];
   public generalData: singleEpisode[] = [];
 
